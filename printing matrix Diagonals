@@ -1,0 +1,56 @@
+import java.util.*;
+class A 
+{    
+    public static void main(String[] args) 
+    {
+        int r1,c1;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter rows for m1:");
+        r1=sc.nextInt();
+        System.out.print("Enter columns for m1:");
+        c1=sc.nextInt();
+        int[][] m1=new int[r1][c1];
+        {
+            for(int i=0;i<r1;i++)
+            {
+                for(int j=0;j<c1;j++)
+                {
+                    m1[i][j]=sc.nextInt();
+                }
+            }
+        }
+        System.out.print("right diagonal=");
+        for(int i=0;i<r1;i++)
+        {
+            for(int j=0;j<c1;j++)
+            {
+                if(i+j==c1-1)
+                
+                {
+                    System.out.println(m1[i][j]+" ");
+                }
+            }
+        }
+        System.out.print("left diagonal=");
+        for(int i=0;i<r1;i++)
+        {
+            for(int j=0;j<c1;j++)
+            {
+                
+                if(i==j)
+                {
+                    System.out.print(m1[i][j]+" ");
+                }
+            }
+        }
+    
+    }
+}
+output
+Enter rows for m1:3
+Enter columns for m1:3
+0 0 -1
+-383732 -1 -0
+2 1 3
+right diagonal=-1 -1 2 
+left diagonal=0 -1 3 
