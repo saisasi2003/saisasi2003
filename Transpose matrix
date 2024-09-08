@@ -1,0 +1,51 @@
+import java.util.*;
+class A 
+{    
+    public static void main(String[] args) 
+    {
+        int r1,c1,ldsum=0,rdsum=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter rows for m1:");
+        r1=sc.nextInt();
+        System.out.print("Enter columns for m1:");
+        c1=sc.nextInt();
+        int[][] m1=new int[r1][c1];
+        int[][] transposematrix=new int[r1][c1];
+        {
+            for(int i=0;i<r1;i++)
+            {
+                for(int j=0;j<c1;j++)
+                {
+                    m1[i][j]=sc.nextInt();
+                }
+            }
+        }
+        
+        for(int i=0;i<r1;i++)
+        {
+            for(int j=0;j<c1;j++)
+            {
+                transposematrix[i][j]=m1[j][i];
+            }
+        }
+        System.out.println("Transpose matrix is:");
+        for(int i=0;i<r1;i++)
+        {
+            for(int j=0;j<c1;j++)
+            {
+                System.out.print(transposematrix[i][j]+""+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+output
+Enter rows for m1:3
+Enter columns for m1:3
+11 22 33
+44 5 6
+7 0 0
+Transpose matrix is:
+11 44 7 
+22 5 0 
+33 6 0 
