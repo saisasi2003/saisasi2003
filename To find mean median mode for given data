@@ -1,0 +1,28 @@
+input
+[1,2,3,2,1,1]
+output
+Mean=1.67
+Median= 1.5
+Mode= 1
+=======
+a=[1,2,3,2,1,1]
+mean=sum(a)/len(a)
+print("Mean={:.2f}".format(mean))#to print only 2 decimal points
+if(len(a)%2==0):
+    x=a[len(a)//2]
+    y=a[(len(a)//2)+1]
+    median=(x+y)/2
+print("Median=",median)
+d={}
+for i in a:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1
+mxele=None
+mxct=0
+for ele,c in d.items():
+    if c>mxct:
+        mxct=c
+        mxele=ele
+print("Mode=",mxele)
