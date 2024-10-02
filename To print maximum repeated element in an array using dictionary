@@ -1,0 +1,20 @@
+To print maximum repeated element in an array using dictionary
+ip=[1,2,3,2,1,1]
+op=1
+==*==
+a=[1,2,3,2,1,1]
+d={}
+for i in a:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1
+print(d)
+mxele=None
+mxct=0
+for e,c in d.items():
+    if c>mxct:
+        mxct=c
+        mxele=e
+print(mxct)
+print(mxele)
