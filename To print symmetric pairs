@@ -1,0 +1,16 @@
+Two pairs (a, b) and (c, d) are said to be symmetric if c is equal to b and a is equal to d. For example, (10, 20) and (20, 10) are symmetric. Given an array of pairs find all symmetric pairs in it. 
+It may be assumed that the first elements of all pairs are distinct.
+Example: 
+Input: arr[] = {{11, 20}, {30, 40}, {5, 10}, {40, 30}, {10, 5}}
+Output: Following pairs have symmetric pairs
+        (30, 40)
+        (5, 10)
+==*==
+m=int(input())
+a=[]
+for i in range(m):
+    a.append(list(map(int,input().split())))
+for i in range(m):
+    for j in range(i+1,m):
+        if(a[i][0]==a[j][1] and a[i][1]==a[j][0]):
+            print("(",a[i][0],",",a[i][1],")")
