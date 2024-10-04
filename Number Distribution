@@ -1,0 +1,14 @@
+Print the count of the occurrences of positive integers, negative integers, and zeroes in the given array.
+Input Format
+The first line of the input contains an integer N - size of the array, second line of input contains an array elements of the array.n=int(input())
+===*===
+pos=neg=zeros=0
+a=list(map(int,input().split()))
+for i in a:
+    if i==0:
+        zeros+=1
+    elif i<=0:
+        neg+=1
+    else:
+        pos+=1
+print(f"pos={pos} neg={neg} zeros={zeros}")
